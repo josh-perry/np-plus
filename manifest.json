@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+    "name": "Skeleton",
+    "description": "",
+    "version": "0.1",
+    "icons": {
+    	"16": "Icon-16.png",
+    	"48": "Icon-50.png"
+    },
+
+    "page_action": {
+    	"default_icon": "Icon-50.png",
+	    "default_title": "Skeleton",
+        "default_popup": "options.html"
+    },
+
+    "background": {
+    	"scripts": ["background.js"],
+    	"persistent": true
+    },
+
+    "permissions": [
+    ],
+
+    "options_ui": {
+        "page": "options.html",
+        "chrome_style": true
+    }
+}
