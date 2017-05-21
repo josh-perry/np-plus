@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
-    "name": "Skeleton",
-    "description": "",
+    "name": "NP+",
+    "description": "Neptune's Pride improvements",
     "version": "0.1",
     "icons": {
     	"16": "Icon-16.png",
@@ -10,16 +10,19 @@
 
     "page_action": {
     	"default_icon": "Icon-50.png",
-	    "default_title": "Skeleton",
+	    "default_title": "NP+",
         "default_popup": "options.html"
     },
 
-    "background": {
-    	"scripts": ["background.js"],
-    	"persistent": true
-    },
-
     "permissions": [
+    ],
+
+    "content_scripts": [
+        {
+            "matches": ["https://np.ironhelmet.com/game/*"],
+            "css": ["css/np-plus.css"],
+            "js": ["jquery-2.2.3.min.js", "js/np-plus.js"]
+        }
     ],
 
     "options_ui": {

@@ -1,0 +1,25 @@
+.widget.button.button_up {
+	overflow: visible;
+}
+
+[npplus-tooltip]:before {
+    content: attr(npplus-tooltip);
+    position: absolute;
+    opacity: 0;
+    transition: all 0.05s ease;
+    padding: 10px;
+    color: white;
+    border-radius: 2px;
+    top: -32px;
+    display: inline-block;
+    white-space: nowrap;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+[npplus-tooltip]:hover:before {
+    opacity: 1;
+    background: #1a1d44;
+    margin: 0;
+    pointer-events: none;
+}
