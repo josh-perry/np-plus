@@ -3,6 +3,7 @@
 }
 
 [npplus-tooltip]:before {
+    font-family: OpenSansRegular, sans-serif;
     content: attr(npplus-tooltip);
     position: absolute;
     opacity: 0;

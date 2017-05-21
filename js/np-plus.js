@@ -1,3 +1,10 @@
+const battleCalculatorHtml = `
+<div class="widget button button_up" tabindex="0" style="left: 128px; top: 56px; width: 32px; height: 32px;">
+   <a class="npplus-tooltip" npplus-tooltip="Combat Calculator">
+      <div class="widget icon-doc-text txt_center icon_button" style="left: 0px; top: 16px; width: 32px;"></div>
+   </a>
+</div>`
+
 $(document).ready(() => {
 	var waitInterval = null
 
@@ -48,11 +55,19 @@ $(document).ready(() => {
 		},
 		{
 			selector: 'div.widget.icon-help.icon_button',
-			tooltip: 'View Help',
+			tooltip: 'Help',
 		},
 		{
 			selector: 'div.widget.icon-doc-text.icon_button',
 			tooltip: 'Combat Calculator',
+		},
+		{
+			selector: 'div.widget.icon-eye.icon_button',
+			tooltip: 'View Player\'s Empire',
+		},
+		{
+			selector: 'div.widget.icon-chart-line.icon_button',
+			tooltip: 'Intel',
 		}
 	]
 
