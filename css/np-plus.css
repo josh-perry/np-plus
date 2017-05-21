@@ -19,7 +19,8 @@
 
 [npplus-tooltip]:hover:before {
     opacity: 1;
-    background: #1a1d44;
+    background: #2C3273;
+    border: 1px solid #1a1d44;
     margin: 0;
     pointer-events: none;
 }

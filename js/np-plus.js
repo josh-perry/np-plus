@@ -33,24 +33,47 @@ $(document).ready(() => {
 		{
 			selector: 'div.widget.icon-mail.icon_button',
 			tooltip: 'Diplomacy & Events',
+		},
+		{
+			selector: 'div.widget.icon-plus-circled.icon_button',
+			tooltip: 'Waypoints',
+		},
+		{
+			selector: 'div.widget.icon-down-open.icon_button',
+			tooltip: 'Ship Transfer',
+		},
+		{
+			selector: 'div.widget.icon-up-open.icon_button',
+			tooltip: 'Transfer All Ships To Star',
+		},
+		{
+			selector: 'div.widget.icon-help.icon_button',
+			tooltip: 'View Help',
+		},
+		{
+			selector: 'div.widget.icon-doc-text.icon_button',
+			tooltip: 'Combat Calculator',
 		}
 	]
 
 	function addTooltips() {
-		tooltipTargets.forEach((element, index, array) => {
-			const button = $(element.selector)
-			button.wrap(`<a class='npplus-tooltip' npplus-tooltip='${element.tooltip}'></a>`)
-		});
-	}
+		for (var i = tooltipTargets.length - 1; i >= 0; i--) {
+			var t = tooltipTargets[i]
+			const button = $(t.selector)
 
-	function canGetFirstTarget() {
-		return $(tooltipTargets[0].selector).length > 0
+			if(button.length == 0) {
+				continue
+			}
+
+			button.each(function() {
+				if(!$(this).parent().hasClass('npplus-tooltip')) {
+					$(this).wrap(`<a class='npplus-tooltip' npplus-tooltip='${t.tooltip}'></a>`)
+				}
+			})
+		}
 	}
 
 	waitInterval = setInterval(() => {
-		if(canGetFirstTarget()) {
-			addTooltips()
-			clearInterval(waitInterval)
-		}
+		addTooltips()
 	}, 100)
 })
