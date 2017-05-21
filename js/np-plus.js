@@ -29,13 +29,17 @@ $(document).ready(() => {
 		{
 			selector: 'div.widget.icon-dollar.icon_button',
 			tooltip: 'Bulk Infrastructure Upgrade'
+		},
+		{
+			selector: 'div.widget.icon-mail.icon_button',
+			tooltip: 'Diplomacy & Events',
 		}
 	]
 
 	function addTooltips() {
 		tooltipTargets.forEach((element, index, array) => {
 			const button = $(element.selector)
-			button.wrap(`<a npplus-tooltip='${element.tooltip}'></a>`)
+			button.wrap(`<a class='npplus-tooltip' npplus-tooltip='${element.tooltip}'></a>`)
 		});
 	}
 

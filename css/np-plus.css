@@ -10,7 +10,7 @@
     padding: 10px;
     color: white;
     border-radius: 2px;
-    top: -32px;
+    top: 32px;
     display: inline-block;
     white-space: nowrap;
     z-index: 1000;
@@ -22,4 +22,8 @@
     background: #1a1d44;
     margin: 0;
     pointer-events: none;
+}
+
+a.npplus-tooltip {
+	color: white !important;
 }
